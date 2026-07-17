@@ -562,6 +562,53 @@ main {
 	color: var(--color-accent);
 }
 
+.social-circle-links {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.social-circle {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	color: #fff;
+	background: transparent;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	transition: transform 180ms ease, filter 180ms ease;
+	flex: none;
+}
+
+.social-circle.facebook,
+.social-circle.instagram,
+.social-circle.tiktok {
+	background: transparent;
+}
+
+.social-circle img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 6px;
+	object-fit: contain;
+}
+
+.social-circle.facebook img,
+.social-circle.instagram img,
+.social-circle.tiktok img {
+	padding: 6px;
+}
+
+.social-circle:hover,
+.social-circle:focus-visible {
+	filter: brightness(1.08);
+	transform: translateY(-2px);
+}
+
 .contact-form {
 	display: grid;
 	gap: 12px;
