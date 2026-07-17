@@ -550,6 +550,29 @@ main {
 	color: var(--color-text);
 }
 
+.location-card {
+	margin-top: 1.25rem;
+	padding: 1rem;
+	border-radius: 18px;
+}
+
+.location-card h3 {
+	margin: 0;
+	color: var(--color-text);
+}
+
+.location-card p {
+	margin: 0;
+	color: var(--color-muted);
+}
+
+.location-map-frame {
+	width: 100%;
+	height: 220px;
+	border: 0;
+	border-radius: 12px;
+}
+
 .cta-card a {
 	display: inline-flex;
 	width: fit-content;
@@ -615,6 +638,11 @@ main {
 	padding: 24px;
 	border-radius: var(--radius-lg);
 	background: rgba(255, 253, 248, 0.96);
+	color: var(--color-text);
+}
+
+.contact-form p {
+	color: var(--color-text);
 }
 
 .badge-section {
@@ -796,6 +824,14 @@ main {
 @media (max-width: 640px) {
 	.hero-copy h1 {
 		font-size: clamp(2.8rem, 13vw, 4.5rem);
+	}
+
+	.location-card {
+		padding: 0.9rem;
+	}
+
+	.location-map-frame {
+		height: 190px;
 	}
 
 	.site-header,
