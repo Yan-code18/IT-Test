@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plan the right Biofree Pest Control response by pest type and urgency.">
+    <meta name="theme-color" content="#f1b400">
+    <title>Planner | Biofree Pest Control</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="page-shell">
+        <header class="site-header">
+            <div class="brand">
+                <a href="index.html" class="brand-logo-link">
+                    <img class="brand-logo" src="Biofree Group of Companies Logo.jpg" alt="Biofree Pest Control logo">
+                </a>
+                <div>
+                    <p class="brand-kicker">Biofree Pest Control</p>
+                    <p class="brand-subtitle">Safe, stress-free pest solutions</p>
+                </div>
+            </div>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="services.html">Services</a>
+                <a class="is-active" href="planner.html">Planner</a>
+                <a href="process.html">Process</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a class="button button-solid" href="contact.html">Get a Free Quote</a>
+        </header>
+
+        <main>
+            <section id="planner" class="section reveal">
+                <div class="section-heading">
+                    <p class="eyebrow">Interactive planner</p>
+                    <h2>Choose a pest, set the urgency, and see the next best step.</h2>
+                </div>
+                <div class="planner-card">
+                    <div class="planner-controls">
+                        <div class="option-group" aria-label="Pest selector">
+                            <button class="option-chip is-active" type="button" data-pest-button="general" aria-pressed="true">General pests</button>
+                            <button class="option-chip" type="button" data-pest-button="rodents" aria-pressed="false">Rodents</button>
+                            <button class="option-chip" type="button" data-pest-button="termites" aria-pressed="false">Termites</button>
+                            <button class="option-chip" type="button" data-pest-button="seasonal" aria-pressed="false">Seasonal prevention</button>
+                        </div>
+                        <label class="range-field" for="urgency-range">
+                            <span>Urgency level <strong data-urgency-label>Moderate</strong></span>
+                            <input id="urgency-range" data-urgency-slider type="range" min="1" max="5" value="3">
+                        </label>
+                        <div class="planner-metrics">
+                            <div>
+                                <strong data-plan-response>Same-day visit</strong>
+                                <span>response target</span>
+                            </div>
+                            <div>
+                                <strong data-plan-prep>3-step prep</strong>
+                                <span>home prep checklist</span>
+                            </div>
+                            <div>
+                                <strong data-plan-followup>Standard follow-up</strong>
+                                <span>care plan</span>
+                            </div>
+                        </div>
+                    </div>
+                    <aside class="planner-summary">
+                        <p class="eyebrow">Suggested response</p>
+                        <h3 data-plan-title>General pests - Moderate priority</h3>
+                        <p data-plan-copy>The quickest win is a focused inspection, a perimeter treatment, and a clean-up plan that keeps the same pests from returning.</p>
+                        <ul class="mini-list" data-plan-tips>
+                            <li>Clear food debris and sealed containers from countertops.</li>
+                            <li>Vacuum corners, baseboards, and entry points.</li>
+                            <li>Keep sinks and pet bowls dry overnight.</li>
+                        </ul>
+                        <a class="button button-solid" href="contact.html">Use this plan</a>
+                    </aside>
+                </div>
+            </section>
+        </main>
+
+        <button class="back-to-top" type="button" data-back-to-top aria-label="Back to top">Top</button>
+
+        <footer class="site-footer">
+            <p>Biofree Pest Control</p>
+            <span>Protecting homes with dependable care.</span>
+        </footer>
+    </div>
+</body>
+</html>
