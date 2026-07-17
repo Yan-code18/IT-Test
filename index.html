@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Biofree Pest Control provides fast, friendly, and effective pest control services for homes and businesses.">
-    <title>Biofree Pest Control | Fast, Friendly Pest Control Services</title>
+    <meta name="description" content="Biofree Pest Control provides a polished, interactive pest control landing page with live status, tailored planning, and easy callbacks.">
+    <meta name="theme-color" content="#2f7a4a">
+    <title>Biofree Pest Control | Interactive Pest Control Services</title>
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
 </head>
@@ -22,7 +23,9 @@
             </div>
             <nav class="site-nav" aria-label="Primary">
                 <a href="#services">Services</a>
+                <a href="#planner">Planner</a>
                 <a href="#process">Process</a>
+                <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
             </nav>
             <a class="button button-solid" href="#contact">Get a Free Quote</a>
@@ -59,7 +62,7 @@
 
                 <div class="hero-panel">
                     <div class="hero-card hero-card-large">
-                        <p class="card-label">Today’s focus</p>
+                        <p class="card-label">Today's focus</p>
                         <h2>Fast inspections. Precise treatments. Long-term prevention.</h2>
                         <p>
                             From the first visit to follow-up care, we make pest control simple, calm, and effective.
@@ -83,6 +86,20 @@
                             <strong>Ongoing check-ins</strong>
                         </article>
                     </div>
+                    <div class="status-panel" aria-live="polite">
+                        <div class="status-panel-head">
+                            <span class="status-dot" data-status-dot></span>
+                            <div>
+                                <p class="card-label">Live service status</p>
+                                <h3 data-status-title>Checking availability...</h3>
+                            </div>
+                        </div>
+                        <p data-status-copy>Loading the latest status from the system.</p>
+                        <div class="status-meta">
+                            <span data-status-service>Biofree Pest Control</span>
+                            <span data-status-updated>Awaiting update</span>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -93,25 +110,71 @@
                 <p>Clear pricing and no surprises</p>
             </section>
 
+            <section id="planner" class="section reveal">
+                <div class="section-heading">
+                    <p class="eyebrow">Interactive planner</p>
+                    <h2>Choose a pest, set the urgency, and see the next best step.</h2>
+                </div>
+                <div class="planner-card">
+                    <div class="planner-controls">
+                        <div class="option-group" aria-label="Pest selector">
+                            <button class="option-chip is-active" type="button" data-pest-button="general" aria-pressed="true">General pests</button>
+                            <button class="option-chip" type="button" data-pest-button="rodents" aria-pressed="false">Rodents</button>
+                            <button class="option-chip" type="button" data-pest-button="termites" aria-pressed="false">Termites</button>
+                            <button class="option-chip" type="button" data-pest-button="seasonal" aria-pressed="false">Seasonal prevention</button>
+                        </div>
+                        <label class="range-field" for="urgency-range">
+                            <span>Urgency level <strong data-urgency-label>Moderate</strong></span>
+                            <input id="urgency-range" data-urgency-slider type="range" min="1" max="5" value="3">
+                        </label>
+                        <div class="planner-metrics">
+                            <div>
+                                <strong data-plan-response>Same-day visit</strong>
+                                <span>response target</span>
+                            </div>
+                            <div>
+                                <strong data-plan-prep>3-step prep</strong>
+                                <span>home prep checklist</span>
+                            </div>
+                            <div>
+                                <strong data-plan-followup>Standard follow-up</strong>
+                                <span>care plan</span>
+                            </div>
+                        </div>
+                    </div>
+                    <aside class="planner-summary">
+                        <p class="eyebrow">Suggested response</p>
+                        <h3 data-plan-title>General pests - Moderate priority</h3>
+                        <p data-plan-copy>The quickest win is a focused inspection, a perimeter treatment, and a clean-up plan that keeps the same pests from returning.</p>
+                        <ul class="mini-list" data-plan-tips>
+                            <li>Clear food debris and sealed containers from countertops.</li>
+                            <li>Vacuum corners, baseboards, and entry points.</li>
+                            <li>Keep sinks and pet bowls dry overnight.</li>
+                        </ul>
+                        <a class="button button-solid" href="#contact">Use this plan</a>
+                    </aside>
+                </div>
+            </section>
+
             <section id="services" class="section reveal">
                 <div class="section-heading">
                     <p class="eyebrow">What we handle</p>
                     <h2>Complete pest control for everyday peace of mind</h2>
                 </div>
                 <div class="card-grid">
-                    <article class="info-card">
+                    <article class="info-card service-card" data-plan-target="general" role="button" tabindex="0">
                         <h3>General pest control</h3>
                         <p>Ants, cockroaches, spiders, earwigs, silverfish, and other common intruders.</p>
                     </article>
-                    <article class="info-card">
+                    <article class="info-card service-card" data-plan-target="rodents" role="button" tabindex="0">
                         <h3>Rodent control</h3>
                         <p>Inspection, trapping, entry-point sealing, and prevention that helps keep them out.</p>
                     </article>
-                    <article class="info-card">
+                    <article class="info-card service-card" data-plan-target="termites" role="button" tabindex="0">
                         <h3>Termite solutions</h3>
                         <p>Detection and treatment plans designed to protect the structure of your property.</p>
                     </article>
-                    <article class="info-card">
+                    <article class="info-card service-card" data-plan-target="seasonal" role="button" tabindex="0">
                         <h3>Seasonal protection</h3>
                         <p>Flexible maintenance visits that keep your home ahead of changing pest activity.</p>
                     </article>
@@ -162,10 +225,35 @@
                 </div>
             </section>
 
+            <section id="faq" class="section reveal">
+                <div class="section-heading">
+                    <p class="eyebrow">FAQ</p>
+                    <h2>Common questions, answered quickly.</h2>
+                </div>
+                <div class="faq-list">
+                    <details open>
+                        <summary>How fast can you respond?</summary>
+                        <p>Most requests are handled with same-day or next-day scheduling, depending on urgency and location.</p>
+                    </details>
+                    <details>
+                        <summary>Do you offer follow-up protection?</summary>
+                        <p>Yes. We can set a recurring plan so your property stays covered after the first treatment.</p>
+                    </details>
+                    <details>
+                        <summary>Is the service safe for families and pets?</summary>
+                        <p>We use targeted treatment methods and explain any simple prep steps before the visit.</p>
+                    </details>
+                    <details>
+                        <summary>Can I start with a quote only?</summary>
+                        <p>Absolutely. Use the callback form below and we will confirm the next step before any service is booked.</p>
+                    </details>
+                </div>
+            </section>
+
             <section class="testimonial reveal">
                 <p>
-                    “Professional, on time, and reassuring from the first visit. Our home finally feels comfortable
-                    again.”
+                    "Professional, on time, and reassuring from the first visit. Our home finally feels comfortable
+                    again."
                 </p>
                 <span>Happy local customer</span>
             </section>
@@ -179,13 +267,34 @@
                         your property.
                     </p>
                 </div>
-                <div class="cta-card">
+                <form class="cta-card contact-form" data-callback-form>
+                    <label>
+                        <span>Your name</span>
+                        <input type="text" name="name" placeholder="Your name" required>
+                    </label>
+                    <label>
+                        <span>Service area</span>
+                        <input type="text" name="area" placeholder="Zip code or city" required>
+                    </label>
+                    <label>
+                        <span>Need help with</span>
+                        <select name="problem" required>
+                            <option value="general pests">General pests</option>
+                            <option value="rodents">Rodents</option>
+                            <option value="termites">Termites</option>
+                            <option value="seasonal prevention">Seasonal prevention</option>
+                        </select>
+                    </label>
+                    <button class="button button-solid" type="submit">Request callback</button>
+                    <p class="form-note" data-form-note>We usually reply within one business day.</p>
                     <a href="tel:+10000000000">Call now</a>
-                    <a href="mailto:hello@biofreepest.com">hello@biofreepest.com</a>
+                    <a href="mailto:hello@greenshieldpest.com">hello@greenshieldpest.com</a>
                     <p>Available for residential, commercial, and emergency visits.</p>
-                </div>
+                </form>
             </section>
         </main>
+
+        <button class="back-to-top" type="button" data-back-to-top aria-label="Back to top">Top</button>
 
         <footer class="site-footer">
             <p>Biofree Pest Control</p>
