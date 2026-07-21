@@ -311,13 +311,15 @@ main {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 12px;
+	justify-content: center;
 }
 
 .option-chip {
-	min-height: 42px;
-	padding: 0 16px;
+	width: 120px;
+	height: 48px;
+	padding: 0 12px;
 	border: 1px solid rgba(17, 17, 17, 0.18);
-	border-radius: 999px;
+	border-radius: 12px;
 	background: rgba(255, 255, 255, 0.88);
 	color: var(--color-text);
 	box-shadow: 0 8px 0 rgba(17, 17, 17, 0.08);
@@ -325,6 +327,10 @@ main {
 	font-weight: 700;
 	cursor: pointer;
 	transition: transform var(--ease-standard), background-color var(--ease-standard), color var(--ease-standard);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 }
 
 .option-chip:hover,
